@@ -35,7 +35,7 @@
                     </td>
                     <td class="p-3 underline">
                         <a href="{{ url('categories/'.$category->id.'/edit') }}" class="text-blue-600">Edit</a>
-                        <a href="" class="text-red-600">Delete</a>
+                        <a href="{{ url('categories/'.$category->id.'/delete') }}" class="text-red-600">Delete</a>
                     </td>
                 </tr>
                 @endforeach

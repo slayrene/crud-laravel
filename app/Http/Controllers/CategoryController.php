@@ -58,11 +58,10 @@ class CategoryController extends Controller
         return redirect()->back()->with('status', 'Category edited');
     }
 
-    public function destroy() 
+    public function destroy(int $id) 
     {
-        return view ('category.index');
+        $category = Category::findOrFail($id);
+        $category->delete();
+        return redirect()->back()->with('status', 'Category deleted');
     }
-
-
-
 }
